@@ -391,7 +391,7 @@ button {
   }
 
   .map-card {
-    height: 65vh;
+    height: 60vh;
     /* menor para caber na tela */
     width: 100%;
     /* evita overflow */
