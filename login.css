@@ -22,7 +22,7 @@ body {
 
   background-image:
     linear-gradient(rgba(9, 13, 45, 0.75), rgba(9, 13, 45, 0.85)),
-    url("/sources/background.gif");
+    url("./sources/background.gif");
 
   background-size: cover;
   background-position: center;
