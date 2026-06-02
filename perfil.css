@@ -13,42 +13,35 @@ body {
   min-height: 100vh;
   background: #060b18;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 30px;
+  padding: 30px 20px 100px 20px;
 }
 
 .perfil-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-
   background: #0b1020;
   border-radius: 25px;
   padding: 30px;
-
   color: white;
-
   border: 1px solid rgba(255, 255, 255, 0.08);
-
   box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
 }
 
 /* TOPO */
-
 .topo-perfil {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .foto-area {
   width: 120px;
   height: 120px;
-
   border-radius: 50%;
   overflow: hidden;
-
   border: 3px solid #7c3aed;
-
   flex-shrink: 0;
 }
 
@@ -56,6 +49,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.info-user {
+  flex: 1;
+  min-width: 200px;
 }
 
 .info-user h2 {
@@ -70,132 +68,101 @@ body {
 }
 
 /* XP */
-
 .xp-bar {
-  width: 180px;
+  width: 100%;
+  max-width: 220px;
   height: 8px;
-
   background: #1f2937;
   border-radius: 20px;
+  margin-bottom: 15px;
 }
 
 .xp-fill {
   width: 70%;
   height: 100%;
-
   border-radius: 20px;
-
   background: linear-gradient(90deg, #7c3aed, #9333ea);
 }
 
 /* BIO */
-
 .bio {
   background: #111827;
-
   padding: 20px;
-
   border-radius: 18px;
-
   margin-top: 25px;
 }
 
 .bio .biografia {
   display: block;
-
   font-size: 13px;
-
   color: #9ca3af;
-
   margin-bottom: 10px;
 }
 
 /* CARDS */
-
 .cards {
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 15px;
-
   margin-top: 30px;
 }
 
 .card {
   background: #111827;
-
   padding: 20px;
-
   border-radius: 18px;
-
   text-align: center;
-
   border: 1px solid rgba(255, 255, 255, 0.05);
-
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-
   box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
 }
 
 .card span {
   font-size: 13px;
-
   color: #9ca3af;
 }
 
 .card h3 {
   margin-top: 10px;
-
   font-size: 28px;
 }
 
-/* NIVEL */
-
+/* NÍVEL */
 .nivel-box {
   margin-top: 25px;
-
   background: #111827;
-
   padding: 20px;
-
   border-radius: 18px;
 }
 
 .nivel-texto {
   display: flex;
-
   justify-content: space-between;
-
   margin-bottom: 10px;
-
   font-size: 13px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .barra-nivel {
   width: 100%;
   height: 8px;
-
   background: #1f2937;
-
   border-radius: 20px;
 }
 
 .barra-fill {
   width: 60%;
   height: 100%;
-
   border-radius: 20px;
-
   background: linear-gradient(90deg, #7c3aed, #9333ea);
 }
 
 /* CONQUISTAS */
-
 .conquistas {
   margin-top: 30px;
 }
@@ -206,36 +173,25 @@ body {
 
 .ver-todas {
   font-size: 12px;
-
   color: #7c3aed;
-
   text-align: right;
-
   margin-bottom: 15px;
-
   display: block;
-
   cursor: pointer;
 }
 
 .itens-conquista {
   display: flex;
-
   gap: 15px;
-
   flex-wrap: wrap;
 }
 
 .conquista {
   width: 70px;
   height: 70px;
-
   border-radius: 50%;
-
   background: linear-gradient(45deg, #6d28d9, #9333ea);
-
   box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
-
   transition: 0.3s;
 }
 
@@ -244,117 +200,80 @@ body {
 }
 
 /* BOTÕES */
-
 .acoes-perfil {
-  margin-left: auto;
-
   display: flex;
-
   gap: 10px;
-
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .btn-topo {
   padding: 8px 14px;
-
   border-radius: 12px;
-
   text-decoration: none;
-
   font-size: 13px;
-
   font-weight: 600;
-
   color: white;
-
   background: linear-gradient(45deg, #6d28d9, #9333ea);
-
   transition: 0.3s;
+  display: inline-block;
 }
 
 .btn-topo:hover {
   transform: translateY(-2px);
-
   box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
 }
 
 .btn-secundario {
   background: transparent;
-
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-secundario:hover {
   background: rgba(255, 255, 255, 0.05);
 }
-/* ============================================= */
-/* MENU INFERIOR DESKTOP */
-/* ============================================= */
 
+/* MENU INFERIOR */
 .bottom-nav {
   position: fixed;
-
   left: 50%;
   bottom: 20px;
-
   transform: translateX(-50%);
-
   width: 90%;
   max-width: 900px;
-
   z-index: 1000;
-
   display: grid;
-
   grid-template-columns: repeat(5, 1fr);
-
   align-items: center;
-
   min-height: 90px;
-
   padding: 15px;
-
   border: 1px solid #3b3b52;
-
   border-radius: 24px;
-
   background: linear-gradient(
     180deg,
     rgba(0, 0, 107, 0.85),
     rgba(18, 18, 28, 0.98)
   );
-
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 -10px 30px rgba(0, 0, 0, 0.4);
-
   backdrop-filter: blur(20px);
 }
 
 .nav-item {
   display: grid;
-
   place-items: center;
-
   gap: 8px;
-
   min-height: 60px;
-
   color: #9ca3b0;
-
   font-size: 13px;
-
   font-weight: 600;
-
   text-decoration: none;
-
   transition: all 0.3s ease;
 }
 
 .nav-item:hover {
   color: white;
-
   transform: translateY(-4px);
 }
 
@@ -503,4 +422,110 @@ body {
   right: -3px;
   top: 4px;
   background: #4ef2c2;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+  .perfil-container {
+    padding: 20px;
+  }
+
+  .foto-area {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-user h2 {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 15px 90px 15px;
+  }
+
+  .topo-perfil {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foto-area {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-user {
+    text-align: center;
+  }
+
+  .xp-bar {
+    max-width: 100%;
+  }
+
+  .acoes-perfil {
+    justify-content: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .bottom-nav {
+    width: 95%;
+    min-height: 70px;
+    padding: 10px;
+  }
+
+  .nav-item {
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .nav-fab {
+    width: 48px;
+  }
+
+  .nav-fab span {
+    width: 16px;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .foto-area {
+    width: 80px;
+    height: 80px;
+  }
+
+  .info-user h2 {
+    font-size: 20px;
+  }
+
+  .btn-topo {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .conquista {
+    width: 55px;
+    height: 55px;
+  }
+
+  .bottom-nav {
+    bottom: 10px;
+    min-height: 60px;
+  }
+
+  .nav-item span:last-child {
+    font-size: 9px;
+  }
+
+  .nav-fab {
+    width: 42px;
+  }
 }
