@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #0b1d3a, #010814);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.sucesso {
+  padding: 12px 30px;
+  background: darkslateblue;
+  color: aquamarine;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.subtitulo01 {
+  color: blanchedalmond;
+  font-size: 28px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.subtitulo02 {
+  color: blanchedalmond;
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.avatars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.avatars img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  transition: 0.3s;
+}
+
+.avatars img:hover {
+  transform: scale(1.05);
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.texto,
+.perfil {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.texto {
+  background: blueviolet;
+  color: white;
+}
+
+.perfil {
+  background: rgb(91, 91, 205);
+  color: white;
+}
+
+.texto:hover,
+.perfil:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.continuar {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.continuar:hover {
+  color: aquamarine;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .subtitulo01 {
+    font-size: 24px;
+  }
+
+  .subtitulo02 {
+    font-size: 16px;
+  }
+
+  .avatars img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitulo01 {
+    font-size: 20px;
+  }
+
+  .subtitulo02 {
+    font-size: 14px;
+  }
+
+  .avatars {
+    gap: 15px;
+  }
+
+  .avatars img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .texto,
+  .perfil {
+    width: 100%;
+  }
+
+  .botoes {
+    flex-direction: column;
+  }
+}

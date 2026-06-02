@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Configurações</title>
+
+    <link rel="stylesheet" href="configuracao.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="tela">
+      <h1>Configurações</h1>
+
+      <!-- Conta -->
+      <h2>Conta</h2>
+
+      <div class="bloco">
+        <div class="item" id="editarPerfil">
+          <i class="fa-solid fa-user"></i>
+          <span>Editar Perfil</span>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-lock"></i>
+          <span>Privacidade</span>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-bell"></i>
+          <span>Notificações</span>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Localização</span>
+        </div>
+      </div>
+
+      <!-- Preferências -->
+      <h2>Preferências</h2>
+
+      <div class="bloco">
+        <div class="item">
+          <i class="fa-solid fa-location-crosshairs"></i>
+          <span>Distância - 2 km</span>
+        </div>
+
+        <div class="item">
+          <i class="fa-solid fa-user-group"></i>
+          <span>Quem pode me encontrar</span>
+        </div>
+
+        <div class="item modo">
+          <div>
+            <i class="fa-solid fa-eye"></i>
+            <span>Modo Invisível</span>
+          </div>
+
+          <input type="checkbox" />
+        </div>
+      </div>
+
+      <button onclick="window.location.href = 'login.html'">
+        Sair da Conta
+      </button>
+    </div>
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <a href="perfil.html" class="nav-item">
+        <span class="nav-icon nav-home"></span>
+        <span>Início</span>
+      </a>
+
+      <a href="index.html" class="nav-item">
+        <span class="nav-icon nav-map"></span>
+        <span>Mapa</span>
+      </a>
+
+      <a href="missoes.html" class="nav-item">
+        <span class="nav-fab">
+          <span></span>
+        </span>
+        <span>Missões</span>
+      </a>
+
+      <a href="conexoes.html" class="nav-item">
+        <span class="nav-icon nav-network"></span>
+        <span>Conexões</span>
+      </a>
+
+      <a href="chat.html" class="nav-item">
+        <span class="nav-icon nav-chat"></span>
+        <span>Mensagens</span>
+      </a>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>

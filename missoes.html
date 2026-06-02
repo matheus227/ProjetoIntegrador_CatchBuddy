@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Missões</title>
+    <link rel="stylesheet" href="missoes.css" />
+  </head>
+  <body>
+    <div class="phone-frame">
+      <!-- ===== HEADER ===== -->
+      <header class="app-header">
+        <h1 class="header-title">Missões</h1>
+      </header>
+
+      <!-- ===== TABS ===== -->
+      <nav class="tabs" aria-label="Navegação de missões">
+        <a href="#" class="tab tab--active">Ativas</a>
+        <a href="#" class="tab">Concluídas</a>
+      </nav>
+
+      <!-- ===== MISSIONS LIST ===== -->
+      <section class="section" aria-label="Lista de missões">
+        <!-- Mission 1: Primeira Captura (Completed) -->
+        <article class="mission-card mission-card--completed">
+          <div class="mission-icon">
+            <div class="icon-circle icon-circle--green">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+          </div>
+          <div class="mission-info">
+            <h3 class="mission-title">Primeira Captura</h3>
+            <p class="mission-desc">Capture 1 amigo</p>
+            <div class="mission-reward">
+              <span class="reward-text">+100 XP</span>
+            </div>
+          </div>
+          <div class="mission-progress">
+            <div class="progress-bar progress-bar--complete">
+              <div
+                class="progress-fill progress-fill--complete"
+                style="width: 100%"
+              ></div>
+            </div>
+          </div>
+          <button class="mission-action" aria-label="Compartilhar missão">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </article>
+
+        <!-- Mission 2: Explorador Urbano -->
+        <article class="mission-card">
+          <div class="mission-icon">
+            <div class="icon-circle icon-circle--gold">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="mission-info">
+            <h3 class="mission-title">Explorador Urbano</h3>
+            <p class="mission-desc">Visite 5 lugares diferentes</p>
+            <div class="mission-counter">2/50</div>
+          </div>
+          <div class="mission-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 4%"></div>
+            </div>
+          </div>
+          <button class="mission-action" aria-label="Compartilhar missão">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </article>
+
+        <!-- Mission 3: Conecte-se -->
+        <article class="mission-card">
+          <div class="mission-icon">
+            <div class="icon-circle icon-circle--pink">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+              >
+                <path
+                  d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="mission-info">
+            <h3 class="mission-title">Conecte-se</h3>
+            <p class="mission-desc">Envie 5 mensagens</p>
+            <div class="mission-counter">3/5</div>
+          </div>
+          <div class="mission-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 60%"></div>
+            </div>
+          </div>
+          <button class="mission-action" aria-label="Compartilhar missão">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </article>
+
+        <!-- Mission 4: Aventureiro -->
+        <article class="mission-card">
+          <div class="mission-icon">
+            <div class="icon-circle icon-circle--orange">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path
+                  d="M12 6v6l4 2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="mission-info">
+            <h3 class="mission-title">Aventureiro</h3>
+            <p class="mission-desc">Encontre 10 amigos</p>
+            <div class="mission-counter">7/10</div>
+          </div>
+          <div class="mission-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 70%"></div>
+            </div>
+          </div>
+          <button class="mission-action" aria-label="Compartilhar missão">
+            <svg
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </article>
+      </section>
+
+      <!-- ===== BOTTOM NAVIGATION ===== -->
+      <div class="menu_bottom">
+        <nav class="bottom-nav" aria-label="Navegação principal">
+          <a href="perfil.html" class="nav-item">
+            <span class="nav-icon nav-home" aria-hidden="true"></span>
+            <span>Início</span>
+          </a>
+          <a href="index.html" class="nav-item">
+            <span class="nav-icon nav-map" aria-hidden="true"></span>
+            <span>Mapa</span>
+          </a>
+          <a
+            href="missoes.html"
+            class="nav-item nav-active"
+            aria-current="page"
+          >
+            <span class="nav-fab" aria-hidden="true">
+              <span></span>
+            </span>
+            <span>Missões</span>
+          </a>
+          <a href="conexoes.html" class="nav-item">
+            <span class="nav-icon nav-network" aria-hidden="true"></span>
+            <span>Conexões</span>
+          </a>
+          <a href="chat.html" class="nav-item">
+            <span class="nav-icon nav-chat" aria-hidden="true"></span>
+            <span>Mensagens</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>

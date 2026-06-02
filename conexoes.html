@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conexões</title>
+    <link rel="stylesheet" href="conexoes.css" />
+  </head>
+  <body>
+    <div class="phone-frame">
+      <!-- ===== HEADER ===== -->
+      <header class="app-header">
+        <h1 class="header-title">Conexões</h1>
+        <button class="header-add" aria-label="Adicionar">
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </button>
+      </header>
+
+      <!-- ===== SEARCH BAR ===== -->
+      <div class="search-container">
+        <div class="search-bar">
+          <svg
+            class="search-icon"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <span class="search-placeholder">Buscar amigos</span>
+        </div>
+      </div>
+
+      <!-- ===== TABS ===== -->
+      <nav class="tabs" aria-label="Navegação de conexões">
+        <a href="#" class="tab tab--active">
+          Solicitações
+          <span class="tab-badge">3</span>
+          <span class="tab-indicator"></span>
+        </a>
+        <a href="#" class="tab">Amigos</a>
+        <a href="#" class="tab">Recentes</a>
+      </nav>
+
+      <!-- ===== FRIEND REQUESTS ===== -->
+      <section class="section" aria-label="Solicitações de amizade">
+        <article class="friend-card">
+          <div class="friend-avatar">
+            <img
+              class="avatar-img"
+              src="sources/avatar-lucas.png"
+              alt="Foto de Lucas"
+            />
+          </div>
+          <div class="friend-info">
+            <h3 class="friend-name">Lucas</h3>
+            <p class="friend-meta">5 amigos em comum</p>
+            <div class="friend-actions">
+              <button class="btn btn--accept">Aceitar</button>
+              <button class="btn btn--reject">Recusar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="friend-card">
+          <div class="friend-avatar">
+            <img
+              class="avatar-img"
+              src="sources/avatar-marina.png"
+              alt="Foto de Marina"
+            />
+          </div>
+          <div class="friend-info">
+            <h3 class="friend-name">Marina</h3>
+            <p class="friend-meta">3 amigos em comum</p>
+            <div class="friend-actions">
+              <button class="btn btn--accept">Aceitar</button>
+              <button class="btn btn--reject">Recusar</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="friend-card">
+          <div class="friend-avatar">
+            <img
+              class="avatar-img"
+              src="sources/avatar-rafa.png"
+              alt="Foto de Rafa"
+            />
+          </div>
+          <div class="friend-info">
+            <h3 class="friend-name">Rafa</h3>
+            <p class="friend-meta">7 amigos em comum</p>
+            <div class="friend-actions">
+              <button class="btn btn--accept">Aceitar</button>
+              <button class="btn btn--reject">Recusar</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ===== CLOSE FRIENDS ===== -->
+      <section class="section section--friends" aria-label="Amigos próximos">
+        <div class="section-header">
+          <h2 class="section-title">Amigos Próximos</h2>
+          <a href="#" class="section-link">Ver todas</a>
+        </div>
+
+        <article class="online-friend">
+          <div class="friend-avatar friend-avatar--small">
+            <img
+              class="avatar-img"
+              src="sources/avatar-ana.png"
+              alt="Foto de Ana"
+            />
+          </div>
+          <div class="friend-info">
+            <h3 class="friend-name">Ana</h3>
+            <p class="friend-status">
+              <span class="status-dot status-dot--online"></span>Online - 120m
+            </p>
+          </div>
+          <button class="btn-message" aria-label="Enviar mensagem para Ana">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+              />
+            </svg>
+          </button>
+        </article>
+
+        <article class="online-friend">
+          <div class="friend-avatar friend-avatar--small">
+            <img
+              class="avatar-img"
+              src="sources/avatar-gui.png"
+              alt="Foto de Gui"
+            />
+          </div>
+          <div class="friend-info">
+            <h3 class="friend-name">Gui</h3>
+            <p class="friend-status">
+              <span class="status-dot status-dot--online"></span>Online - 250m
+            </p>
+          </div>
+          <button class="btn-message" aria-label="Enviar mensagem para Gui">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+              />
+            </svg>
+          </button>
+        </article>
+
+        <article class="online-friend online-friend--partial">
+          <div class="friend-avatar friend-avatar--small">
+            <img
+              class="avatar-img"
+              src="sources/avatar-bia.png"
+              alt="Foto de Bia"
+            />
+          </div>
+          <div class="friend-info">
+            <h3 class="friend-name">Bia</h3>
+            <p class="friend-status">
+              <span class="status-dot status-dot--online"></span>Online
+            </p>
+          </div>
+          <button class="btn-message" aria-label="Enviar mensagem para Bia">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+              />
+            </svg>
+          </button>
+        </article>
+      </section>
+
+      <!-- ===== BOTTOM NAVIGATION ===== -->
+      <nav class="bottom-nav" aria-label="Navegação principal">
+          <a href="perfil.html" class="nav-item">
+            <span class="nav-icon nav-home" aria-hidden="true"></span>
+            <span>Início</span>
+          </a>
+          <a href="index.html" class="nav-item">
+            <span class="nav-icon nav-map" aria-hidden="true"></span>
+            <span>Mapa</span>
+          </a>
+          <a
+            href="conexoes.html"
+            class="nav-item nav-active"
+            aria-current="page"
+          >
+            <span class="nav-fab" aria-hidden="true">
+              <span></span>
+            </span>
+            <span>Conexões</span>
+          </a>
+          <a href="Missoes.html" class="nav-item">
+            <span class="nav-icon nav-network" aria-hidden="true"></span>
+            <span>Missões</span>
+          </a>
+          <a href="chat.html" class="nav-item">
+            <span class="nav-icon nav-chat" aria-hidden="true"></span>
+            <span>Mensagens</span>
+          </a>
+        </nav>
+    </div>
+  </body>
+</html>

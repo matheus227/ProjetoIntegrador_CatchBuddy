@@ -1,0 +1,417 @@
+/* fontes importadas do google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Corpo principal da página */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: 100dvh;
+  /* melhor para mobile */
+  overflow-x: hidden;
+  /* evita estouro lateral */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image:
+    linear-gradient(rgba(9, 13, 45, 0.75), rgba(9, 13, 45, 0.85)),
+    url("/sources/background.gif");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.title {
+  display: flex;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #8ed0ff;
+}
+
+.hero span {
+  color: #7a4dff;
+}
+
+.btnflex {
+  display: flex;
+  justify-content: center;
+}
+
+.btnExplorar {
+  background: linear-gradient(50deg, #60f9bb, #00d4ff, #7a4dff 80%);
+  border: none;
+  padding: 14px 120px;
+  color: #000000;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Estilo padrão de todos botões footer */
+button {
+  border: none;
+  padding: 14px 24px;
+  color: #fffff0;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.map-card {
+  height: 350px;
+  width: 100%;
+  background: #11173f;
+  border-radius: 25px;
+
+  /* esconde conteúdo que passar da borda */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* sombra glow */
+  box-shadow: 0 0 30px #7a4dff55;
+  position: relative;
+}
+
+.map-frame {
+  width: 100%;
+  height: 100%;
+  filter: hue-rotate(190deg) saturate(140%) brightness(70%) contrast(110%);
+  /* Efeito de Brilho (Glow) Azul */
+  box-shadow: 0 0 20px 5px rgba(0, 102, 255, 0.6);
+  /* Suavização visual */
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  border-radius: 8px;
+}
+
+/* Iframe do mapa */
+.icon-frame {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  border-radius: 25px;
+
+  /* ocupa toda área do pai */
+  position: absolute;
+  inset: 0;
+
+  /*Adicional*/
+
+  /* Altere os valores abaixo para a posição desejada */
+  top: 50%;
+  /* Distância do topo (ex: metade da altura) */
+  left: 40%;
+  /* Distância da esquerda */
+
+  /* Ajuste fino para centralizar o ícone exatamente no ponto */
+  transform: translate(-50%, -50%);
+
+  /* Estilos visuais do ícone */
+  font-size: 24px;
+  z-index: 10;
+  /* Garante que o ícone fique por cima do iframe */
+}
+
+/* Círculo de animação pulse */
+.pulse {
+  display: flex;
+  align-content: center;
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+
+  /* animação infinita */
+  animation: pulse 2s infinite;
+
+  /* fica acima dos outros elementos */
+  z-index: 99;
+}
+
+/* Centro da pulse */
+.pulse-center {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  /* centraliza melhor */
+  transform: translate(-30%, -30%);
+
+  /* brilho */
+  box-shadow: 0 0 20px #0e1516;
+}
+
+/* Animação de expansão */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    /* tamanho normal */
+    opacity: 1;
+    /* visível */
+  }
+
+  100% {
+    transform: scale(4.8);
+    /* aumenta bastante */
+    opacity: 0;
+    /* some */
+  }
+}
+
+/* Menu inferior */
+
+.bottom-nav {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+  min-height: 84px;
+  padding: 11px 15px max(13px, env(safe-area-inset-bottom));
+  border-top: 1px solid #3b3b52;
+  border-radius: 24px 24px 0 0;
+  background: linear-gradient(180deg, #00006bdb, #12121cfa) transparent 0 100%;
+  box-shadow:
+    inset 0 1px 0 #ffffff14,
+    0 -18px 42px #00000042;
+  backdrop-filter: blur(20px);
+}
+
+.nav-item {
+  display: grid;
+  place-items: center;
+  align-content: normal;
+  min-height: 54px;
+  gap: 6px;
+  color: #9ca3b0;
+  font-size: 10px;
+  font-weight: 620;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 21px;
+  aspect-ratio: 1;
+  color: currentColor;
+}
+
+.nav-icon::before,
+.nav-icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.nav-home::before {
+  width: 17px;
+  height: 13px;
+  bottom: 2px;
+  border-radius: 4px 4px 3px 3px;
+  background: currentColor;
+}
+
+.nav-home::after {
+  width: 13px;
+  height: 13px;
+  top: 1px;
+  border-radius: 3px;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+
+.nav-map::before {
+  width: 16px;
+  height: 16px;
+  border: 4px solid currentColor;
+  border-radius: 50% 50% 50% 4px;
+  transform: rotate(-45deg);
+}
+
+.nav-map::after {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #0f1117;
+}
+
+.nav-network::before,
+.nav-network::after {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow:
+    11px 0 0 currentColor,
+    5px 11px 0 currentColor;
+}
+
+.nav-network::after {
+  width: 16px;
+  height: 12px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  border-radius: 50% 50% 0 0;
+  background: transparent;
+  box-shadow: none;
+  transform: translateY(4px) scale(0.72);
+  opacity: 0.68;
+}
+
+.nav-chat::before {
+  width: 18px;
+  height: 14px;
+  border-radius: 5px;
+  background: currentColor;
+}
+
+.nav-chat::after {
+  width: 8px;
+  height: 8px;
+  right: 1px;
+  bottom: 1px;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.nav-active {
+  color: #ffffff;
+  transform: translateY(-9px);
+}
+
+.nav-fab {
+  display: grid;
+  place-items: center;
+  width: 57px;
+  aspect-ratio: 1;
+  border: 5px solid #1a1c24;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffffff 0 3px,
+      #ffffff73 4px 8px,
+      transparent 9px
+    ),
+    linear-gradient(145deg, #00d8af, #8c5dff 52%, #dc7ce8);
+  box-shadow:
+    inset 0 1px 0 #ffffff6b,
+    0 0 0 3px #8c5dffa8,
+    0 12px 26px #8c5dff70;
+}
+
+.nav-fab span {
+  position: relative;
+  display: block;
+  width: 19px;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: #f3fcfb;
+  transform: rotate(10deg);
+}
+
+.nav-fab span::before,
+.nav-fab span::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.nav-fab span::before {
+  width: 7px;
+  height: 7px;
+  left: -4px;
+  top: 6px;
+  background: #9d4edd;
+}
+
+.nav-fab span::after {
+  width: 6px;
+  height: 6px;
+  right: -3px;
+  top: 4px;
+  background: #4ef2c2;
+}
+/* ============================================= */
+
+.app {
+  width: 100%;
+  max-width: 430px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .map-card {
+    height: 65vh;
+    /* menor para caber na tela */
+    width: 100%;
+    /* evita overflow */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .app {
+    padding: 10px;
+    width: 100%;
+    height: 90vh;
+  }
+
+  .bottom-nav {
+    padding-inline: 10px;
+  }
+
+  .nav-item {
+    font-size: 9px;
+  }
+}

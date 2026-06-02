@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+
+  <body>
+    <!-- Desktop Version -->
+    <div class="chat-container">
+      <aside class="sidebar-chat">
+        <button class="toggle-btn">☰</button>
+
+        <h2>Mensagens</h2>
+
+        <div class="contato ativo">
+          <img src="sources/avatar-rafa.png" alt="João Silva" />
+          <span>João Silva</span>
+        </div>
+
+        <div class="contato">
+          <img src="sources/avatar-ana.png" alt="Ana Souza" />
+          <span>Ana Souza</span>
+        </div>
+
+        <div class="contato">
+          <img src="sources/avatar-lucas.png" alt="Carlos Lima" />
+          <span>Carlos Lima</span>
+        </div>
+
+        <button class="voltar" onclick="window.location.href = 'index.html'">
+          Voltar
+        </button>
+      </aside>
+
+      <main class="chat-area">
+        <div class="chat-topo">
+          <img src="sources/avatar-rafa.png" alt="João Silva" />
+
+          <div>
+            <h3>João Silva</h3>
+            <p>Online</p>
+          </div>
+        </div>
+
+        <div class="mensagens">
+          <div class="msg recebida">Olá! Tudo bem?</div>
+          <div class="msg enviada">Tudo sim, e você?</div>
+          <div class="msg recebida">Estou ótimo!</div>
+        </div>
+
+        <div class="enviar">
+          <input type="text" placeholder="Digite sua mensagem..." />
+          <button>➤</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Mobile Version -->
+    <div class="phone">
+      <div class="header">
+        <div class="left">
+          <a href="index.html" class="back">←</a>
+
+          <div class="avatar"></div>
+
+          <div class="info">
+            <h3>Julia</h3>
+
+            <div class="status">
+              <span class="dot"></span>
+              Online
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <div class="action-btn">🎥</div>
+          <div class="action-btn">📞</div>
+        </div>
+      </div>
+
+      <div class="chat">
+        <div class="message received">
+          Oi! Que legal te encontrar por aqui! Você também curte explorar
+          lugares?
+          <div class="time">14:32</div>
+        </div>
+
+        <div class="message sent">
+          Oi, eu amo! Estou sempre em busca de novos lugares e aventuras. 🚀
+          <div class="time">14:33</div>
+        </div>
+
+        <div class="message received">
+          Sério? Bora marcar de nos encontrar e explorar juntos?
+          <div class="time">14:34</div>
+        </div>
+
+        <div class="message sent">
+          Bora sim! Vai ser demais! 🙂
+          <div class="time">14:35 ✓✓</div>
+        </div>
+
+        <div class="read">Lida</div>
+      </div>
+
+      <div class="input-area">
+        <div class="plus">+</div>
+
+        <input class="input" type="text" placeholder="Digite uma mensagem..." />
+
+        <button class="send">➜</button>
+      </div>
+    </div>
+
+    <script>
+      // Sidebar toggle functionality
+      const botao = document.querySelector(".toggle-btn");
+      const sidebar = document.querySelector(".sidebar-chat");
+
+      if (botao && sidebar) {
+        botao.addEventListener("click", () => {
+          sidebar.classList.toggle("fechada");
+        });
+      }
+    </script>
+  </body>
+</html>
